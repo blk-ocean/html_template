@@ -1,5 +1,5 @@
 .virtualRepeatdemoHorizontalUsage #horizontal-container {
-  height: 710px;
+  height: 550px;
   width: 100%;
   max-width: 1500px; }
 
@@ -11,6 +11,12 @@
   padding-top: 35px;
   text-align: center;
   width: 400px; }
+
+.virtualRepeatdemoHorizontalUsage .md-card-image{
+  height: 250px;
+  width: 100%;
+
+}
 
 .virtualRepeatdemoHorizontalUsage md-content {
   margin: 16px; }

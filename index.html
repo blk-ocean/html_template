@@ -8,9 +8,9 @@
 
     <!-- CSS  -->
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-    <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
-    <link href="css/scroll.css" type="text/css" rel="stylesheet" >
+    <link href="/static/min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="/static/min/custom-min.css" type="text/css" rel="stylesheet" >
+    <link href="/static/css/scroll.css" type="text/css" rel="stylesheet" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css'>
     <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.1/docs.css'>
@@ -212,28 +212,30 @@
 
 
 
+
   <div ng-controller="AppCtrl as ctrl" ng-cloak="" class="virtualRepeatdemoHorizontalUsage" ng-app="MyApp">
   <md-content layout="column">
     
     <md-virtual-repeat-container id="horizontal-container" md-orient-horizontal="">
+    
 
-      <div md-virtual-repeat="item in name | limitTo:limit" class="repeated-item" flex="">
+      <div md-virtual-repeat="item in img1url | limitTo:limit" class="repeated-item" flex="">
        <md-card>
-        <img ng-src="{{img1url}}" class="md-card-image" alt="Washed Out">
+        <img ng-src="{{item}}" class="md-card-image" alt="Washed Out">
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">{{item}}</span>
+            <span class="md-headline">{{name[[$index]]}}</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
           <p>
-            {{text_summary[1]}}
+            {{text_summary[$index]}}
             </p>
             <p>
-            {{address}}
+            {{address[$index]}}
             </p>
             <p>
-            {{location}}
+            {{location[$index]}}
             </p>
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
@@ -241,7 +243,7 @@
           <md-button>Action 2</md-button>
         </md-card-actions>
       </md-card>
-        {{item.name}}
+        
 
         
       </div>
@@ -252,6 +254,11 @@
 
 
 </div>
+
+
+
+
+
 
 
 
@@ -450,8 +457,8 @@
 
 
     <!--  Scripts-->
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
+    <script src="/static/min/plugin-min.js"></script>
+    <script src="/static/min/custom-min.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
@@ -463,7 +470,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-<script src="js/scroll.js"></script>
+<script src="/static/js/scroll.js"></script>
 
 <script language="Javascript">
 <!--

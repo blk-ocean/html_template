@@ -19,7 +19,7 @@ var myapp = angular
 
       $http.get('http://ec2-35-164-83-142.us-west-2.compute.amazonaws.com:8000/lounge?location=ConnaughtPlace').
         then(function(response) {
-            //$scope.greeting = response.data;
+            $scope.greeting = response.data;
             //to get all the properties contained in the json object we can check it up by Object.getOwnPropertyNames(name of object)
             //alert(Object.getOwnPropertyNames(response.data));
 
@@ -56,7 +56,7 @@ var myapp = angular
 
 
     // set the default amount of items being displayed
-    $scope.limit= 1;
+    $scope.limit= 3;
 
 
     // loadMore function
