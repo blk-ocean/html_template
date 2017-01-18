@@ -18,6 +18,21 @@
 
 }
 
+.virtualRepeatdemoHorizontalUsage .buttonPressed{
+    background-color: #ADD8E6; /* blue */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align : center;
+    text-decoration : none;
+    display : inline-block;
+    font-size: 56px;
+    border-radius: 50px;
+
+}
+
+
+
 .virtualRepeatdemoHorizontalUsage md-content {
   margin: 16px; }
 
